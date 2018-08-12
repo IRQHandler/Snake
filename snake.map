@@ -1,0 +1,308 @@
+###############################################################################
+#
+# IAR ELF Linker V8.20.2.14835/W32 for ARM                12/Aug/2018  13:15:34
+# Copyright 2007-2017 IAR Systems AB.
+#
+#    Output file  =  /*removed by LIR*/
+#    
+#    
+#    Map file     =  /*removed by LIR*/
+#    
+#    
+#    Command line =  /*removed by LIR*/
+#
+###############################################################################
+
+*******************************************************************************
+*** MESSAGES
+***
+
+Warning[Ls015]: [stack usage analysis] at least one function appears to be
+          uncalled. Example: "SysTick_Handler". A complete list of uncalled
+          functions is in the map file.
+
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x0800ffff] { ro };
+define block CSTACK with size = 88, alignment = 8 { };
+define block HEAP with size = 0M, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x20001fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind        Address   Size  Object
+  -------            ----        -------   ----  ------
+"A0":                                      0xc0
+  .intvec            ro code  0x08000000   0xc0  startup_stm32f0xx.o [1]
+                            - 0x080000c0   0xc0
+
+"P1":                                     0x783
+  .text              ro code  0x080000c0  0x428  bsp.o [1]
+  .text              ro code  0x080004e8   0x36  I32DivMod.o [4]
+  .text              ro code  0x0800051e    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000520   0x48  ABImemset.o [4]
+  .text              ro code  0x08000568    0x2  IntDivZer.o [4]
+  .text              ro code  0x0800056a    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800056c   0xe8  system_stm32f0xx.o [1]
+  .text              ro code  0x08000654   0xbc  main.o [1]
+  .text              ro code  0x08000710   0x3c  packbits_init_single.o [4]
+  .text              ro code  0x0800074c   0x28  data_init.o [4]
+  .iar.init_table    const    0x08000774   0x10  - Linker created -
+  .text              ro code  0x08000784   0x1e  cmain.o [4]
+  .text              ro code  0x080007a2    0x4  low_level_init.o [3]
+  .text              ro code  0x080007a6    0x8  exit.o [3]
+  .text              ro code  0x080007ae    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x080007b0    0xa  cexit.o [4]
+  .text              ro code  0x080007ba    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x080007bc   0x14  exit.o [5]
+  .rodata            const    0x080007d0   0x14  main.o [1]
+  .text              ro code  0x080007e4   0x10  startup_stm32f0xx.o [1]
+  .text              ro code  0x080007f4    0xc  cstartup_M.o [4]
+  .text              ro code  0x08000800    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000802    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000804    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000806    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000808    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800080a    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800080c    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800080e    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000810    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000812    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000814    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000816    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000818    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800081a    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800081c    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800081e    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000820    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000822    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000824    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000826    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000828    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800082a    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800082c    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x0800082e    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000830    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000832    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000834    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000836    0x2  startup_stm32f0xx.o [1]
+  .text              ro code  0x08000838    0x2  startup_stm32f0xx.o [1]
+  .rodata            const    0x0800083a    0x0  packbits_init_single.o [4]
+  Initializer bytes  const    0x0800083a    0x9  <for P2-1>
+                            - 0x08000843  0x783
+
+"P2", part 1 of 2:                         0x47
+  P2-1                        0x20000000   0x47  <Init block>
+    .data            inited   0x20000000   0x20  main.o [1]
+    .bss             inited   0x20000020   0x20  main.o [1]
+    .bss             inited   0x20000040    0x4  main.o [1]
+    .bss             inited   0x20000044    0x2  main.o [1]
+    .bss             inited   0x20000046    0x1  main.o [1]
+                            - 0x20000047   0x47
+
+"P2", part 2 of 2:                         0x58
+  CSTACK                      0x20000048   0x58  <Block>
+    CSTACK           uninit   0x20000048   0x58  <Block tail>
+                            - 0x200000a0   0x58
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x9 (12% of destination):
+          0x0800083a   0x9
+    1 destination range, total size 0x47:
+          0x20000000  0x47
+
+
+*******************************************************************************
+*** STACK USAGE
+***
+
+  Call Graph Root Category  Max Use  Total Use
+  ------------------------  -------  ---------
+  Program entry                 60         60
+  Uncalled function             28         48
+
+
+Program entry
+  "__iar_program_start": 0x080007f5
+
+  Maximum call chain                               60  bytes
+
+    "__iar_program_start"                           0
+    "__cmain"                                       0
+    "main"                                         16
+    "game_over"                                     8
+    "draw_score"                                   16
+    "place_num"                                    20
+
+Uncalled function
+  "SysTick_Handler": 0x08000475
+
+  Maximum call chain                               28  bytes
+
+    "SysTick_Handler"                               8
+    "clock_out"                                    20
+
+Uncalled function
+  "SystemInit": 0x0800056d
+
+  Maximum call chain                               20  bytes
+
+    "SystemInit"                                   20
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+/*Removed by LIR*/: [1]
+    bsp.o                     1 064
+    main.o                      188       29       71
+    startup_stm32f0xx.o         274
+    system_stm32f0xx.o          232
+    -------------------------------------------------
+    Total:                    1 758       29       71
+
+command line: [2]
+    -------------------------------------------------
+    Total:
+
+dl6M_tln.a: [3]
+    exit.o                        8
+    low_level_init.o              4
+    -------------------------------------------------
+    Total:                       12
+
+rt6M_tl.a: [4]
+    ABImemset.o                  72
+    I32DivMod.o                  54
+    IntDivZer.o                   2
+    cexit.o                      10
+    cmain.o                      30
+    cstartup_M.o                 12
+    data_init.o                  40
+    packbits_init_single.o       60
+    -------------------------------------------------
+    Total:                      280
+
+shb_l.a: [5]
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
+
+    Linker created                        16       88
+-----------------------------------------------------
+    Grand Total:              2 070       45      159
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address  Size  Type      Object
+-----                      -------  ----  ----      ------
+.iar.init_table$$Base   0x08000774         --   Gb  - Linker created -
+.iar.init_table$$Limit  0x08000784         --   Gb  - Linker created -
+?main                   0x08000785        Code  Gb  cmain.o [4]
+CSTACK$$Base            0x20000048         --   Gb  - Linker created -
+CSTACK$$Limit           0x200000a0         --   Gb  - Linker created -
+Goal                    0x20000044   0x2  Data  Gb  main.o [1]
+Nexthead                0x20000000   0x2  Data  Gb  main.o [1]
+Region$$Table$$Base     0x08000774         --   Gb  - Linker created -
+Region$$Table$$Limit    0x08000784         --   Gb  - Linker created -
+Snake                   0x20000008  0x18  Data  Gb  main.o [1]
+SysTick_Handler         0x08000475  0x44  Code  Gb  bsp.o [1]
+SystemInit              0x0800056d  0xcc  Code  Gb  system_stm32f0xx.o [1]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x20001fff        Data  Gb  command line/config [2]
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x20000000        Data  Gb  command line/config [2]
+__aeabi_idiv0           0x08000569        Code  Gb  IntDivZer.o [4]
+__aeabi_memclr          0x08000565        Code  Gb  ABImemset.o [4]
+__cmain                 0x08000785        Code  Gb  cmain.o [4]
+__exit                  0x080007bd  0x14  Code  Gb  exit.o [5]
+__iar_Memset4_word      0x08000535        Code  Gb  ABImemset.o [4]
+__iar_Memset_word       0x08000521        Code  Gb  ABImemset.o [4]
+__iar_data_init3        0x0800074d  0x28  Code  Gb  data_init.o [4]
+__iar_packbits_init_single3
+                        0x08000711  0x3c  Code  Gb  packbits_init_single.o [4]
+__iar_program_start     0x080007f5        Code  Gb  cstartup_M.o [4]
+__iar_small_uidiv       0x080004e9        Code  Gb  I32DivMod.o [4]
+__iar_small_uidivmod    0x080004e9        Code  Gb  I32DivMod.o [4]
+__iar_systems$$module {Abs}
+                        0x00000001        Data  Gb  command line/config [2]
+__low_level_init        0x080007a3   0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x08000000        Data  Gb  startup_stm32f0xx.o [1]
+_call_main              0x08000791        Code  Gb  cmain.o [4]
+_exit                   0x080007b1        Code  Gb  cexit.o [4]
+_main                   0x0800079f        Code  Gb  cmain.o [4]
+clock_in                0x08000193  0x4c  Code  Gb  bsp.o [1]
+clock_out               0x08000139  0x5a  Code  Gb  bsp.o [1]
+draw_score              0x080003fd  0x3e  Code  Gb  bsp.o [1]
+exit                    0x080007a7   0x8  Code  Gb  exit.o [3]
+fbuffer                 0x20000020  0x20  Data  Gb  main.o [1]
+game_over               0x0800043b  0x36  Code  Gb  bsp.o [1]
+get_seed                0x08000233  0x1e  Code  Gb  bsp.o [1]
+gp_data                 0x20000005   0x1  Data  Gb  main.o [1]
+gpio_init               0x080000c1  0x78  Code  Gb  bsp.o [1]
+is_collision            0x08000207  0x16  Code  Gb  bsp.o [1]
+is_game_over            0x20000046   0x1  Data  Gb  main.o [1]
+is_goal                 0x0800021d  0x16  Code  Gb  bsp.o [1]
+main                    0x08000655  0xaa  Code  Gb  main.o [1]
+move_tail               0x08000341  0x80  Code  Gb  bsp.o [1]
+num_bmps                0x080007d0  0x14  Data  Gb  main.o [1]
+place_goal              0x0800026f  0x2e  Code  Gb  bsp.o [1]
+place_num               0x080003c9  0x2a  Code  Gb  bsp.o [1]
+place_point             0x080001df  0x14  Code  Gb  bsp.o [1]
+player_lfsr             0x20000040   0x4  Data  Gb  main.o [1]
+player_score            0x20000004   0x1  Data  Gb  main.o [1]
+prev_gp_data            0x20000003   0x1  Data  Gb  main.o [1]
+process_input           0x080002b9  0x84  Code  Gb  bsp.o [1]
+random                  0x08000251  0x1e  Code  Gb  bsp.o [1]
+row_counter             0x20000002   0x1  Data  Gb  main.o [1]
+shift_velocity_fields   0x0800029d  0x1c  Code  Gb  bsp.o [1]
+toggle_point            0x080001f3  0x14  Code  Gb  bsp.o [1]
+
+
+[1] = /*removed by LIR*/
+[2] = command line
+[3] = dl6M_tln.a
+[4] = rt6M_tl.a
+[5] = shb_l.a
+
+  2 070 bytes of readonly  code memory
+     45 bytes of readonly  data memory
+    159 bytes of readwrite data memory
+
+Errors: none
+Warnings: 1
