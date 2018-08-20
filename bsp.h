@@ -51,9 +51,9 @@
 #define LED_NOT_OE      GPIO_BSRR_BS_5                                          // PA5
 
 #define PAD_CLK         GPIO_BSRR_BS_4                                          // PB4
-#define PAD_SER_OUT     GPIO_BSRR_BS_5                                          // PA5
-#define PAD_NOT_PE      GPIO_BSRR_BS_6                                          // PA6
-#define PAD_VCC         GPIO_BSRR_BS_7                                          // PA7
+#define PAD_SER_OUT     GPIO_BSRR_BS_5                                          // PB5
+#define PAD_NOT_PE      GPIO_BSRR_BS_6                                          // PB6
+#define PAD_VCC         GPIO_BSRR_BS_7                                          // PB7
 
 
 
